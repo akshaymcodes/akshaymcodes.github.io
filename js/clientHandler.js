@@ -71,13 +71,13 @@ Pushwoosh.push(['onPermissionGranted', function(api) {
     console.log('Event: onPermissionGranted triggered');
 }]);
 
-Pushwoosh.push('onNotificationClick', function(api, payload) {
-	const {
-		url,
-		messageHash,
-		customData // JSON
-	} = payload;
-});
+// Pushwoosh.push('onNotificationClick', function(api, payload) {
+// 	const {
+// 		url,
+// 		messageHash,
+// 		customData // JSON
+// 	} = payload;
+// });
 
 
 // Executed when a push notification is displayed.
