@@ -4,31 +4,14 @@
 <head>
     <title>App42 Safari Web Push Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="manifest" href="./manifest.json">
-    <script src="https://cdn.pushwoosh.com/webpush/v3/pushwoosh-web-notifications.js" async></script>
-    <script>
-        var Pushwoosh = Pushwoosh || [];
-        Pushwoosh.push(["init", {
-            logLevel: 'info', // possible values: error, info, debug
-            applicationCode: '0FE78-D3A9D',
-            safariWebsitePushID: 'web.com.safari.testSafariPushNotification',
-            defaultNotificationTitle: 'PushwooshAks',
-            defaultNotificationImage: 'https://cp.pushwoosh.com/img/logo-medium.png',
-            autoSubscribe: true,
-            userId: 'akshaym',
-            tags: {
-                'Name': 'Rani Dixit'
-            }
-        }]);
-    </script>
+    
     <!-- <script src="js/App42-all-3.2.min.js"></script> -->
     <script src="js/clientHandler.js"></script>
 
     <script>
 
-        //$(document).ready(function () {
-       // initializePush();
+       // $(document).ready(function () {
+        initializePush();
             // $("#loginBtn4").hide();
             // $("#loginBtn3").show();
             // App42Debugger.enable(true);
@@ -36,7 +19,7 @@
             // App42.initialize("9cdfa8abe8f1c5aadd2fee7a46aaeb0121a65f1f619351113ddd8f440645cd09", "55e27d90504ba7be94d4a6d2728d3684cf5d50d6fbc50199086f31e19c684d0a");
             // App42CampaignAPI.enable(true);
             // App42CampaignAPI.setFBAppId("191186844782620");
-        //});
+       // });
 
     </script>
 
@@ -45,7 +28,7 @@
 
 <body>
 
-    <button>Don Not Click Me</button>
+    <button onclick="initializePush()">Don Not Click Me</button>
 
 
 
