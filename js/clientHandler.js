@@ -13,7 +13,9 @@ var initializePush = function() {
 var checkRemotePermission = function (permissionData) {
     var webPushId = "web.com.safari.testSafariPushNotification";
     var getPushPackageUrl = "https://ruleenginews.southindia.cloudapp.azure.com:52000/createSafariPushPackage";
+    console.log("11111111",permissionData);
     if (permissionData.permission === 'default') {
+        console.log("22222",permissionData);
         // This is a new web service URL and its validity is unknown.
         window.safari.pushNotification.requestPermission(
             getPushPackageUrl, // The web service URL.
@@ -23,6 +25,7 @@ var checkRemotePermission = function (permissionData) {
         );
     }
     else if (permissionData.permission === 'denied') {
+        console.log("3333",permissionData);
         // The user said no.
     }
     else if (permissionData.permission === 'granted') {
