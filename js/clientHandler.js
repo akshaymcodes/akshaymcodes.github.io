@@ -12,7 +12,7 @@ var initializePush = function() {
 
 var checkRemotePermission = function (permissionData) {
     var webPushId = "web.com.safari.testSafariPushNotification";
-    var getPushPackageUrl = "https://ruleenginews.southindia.cloudapp.azure.com:52000";
+    var getPushPackageUrl = "https://safaripush.shephertz.com";
     console.log("11111111",permissionData);
     if (permissionData.permission === 'default') {
         console.log("22222",permissionData);
