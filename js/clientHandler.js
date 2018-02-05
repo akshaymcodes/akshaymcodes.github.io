@@ -1,7 +1,7 @@
 var initializePush = function() {
     // Ensure that the user can receive Safari Push Notifications.
     if ('safari' in window && 'pushNotification' in window.safari) {
-        var webPushId = 'web.com.safari.testSafariPushNotification';
+        var webPushId = 'web.com.shephertz.safariakm';
         var permissionData = window.safari.pushNotification.permission(webPushId);
         checkRemotePermission(permissionData);
     }else{
@@ -11,7 +11,7 @@ var initializePush = function() {
 };
 
 var checkRemotePermission = function (permissionData) {
-    var webPushId = "web.com.safari.testSafariPushNotification";
+    var webPushId = "web.com.shephertz.safariakm";
     var getPushPackageUrl = "https://safaripush.shephertz.com";
     console.log("11111111",permissionData);
     if (permissionData.permission === 'default') {
