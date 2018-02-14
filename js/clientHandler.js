@@ -20,7 +20,7 @@ var checkRemotePermission = function (permissionData) {
         window.safari.pushNotification.requestPermission(
             getPushPackageUrl, // The web service URL.
             webPushId,     // The Website Push ID.
-            {"userName":"Akshay"}, // Data that you choose to send to your server to help you identify the user.
+            {"apiKey":"12daacee60bd1f04e46a71b852f601bdfaa49fe8047a8322e3a3daf4d9b244f7"}, // Data that you choose to send to your server to help you identify the user.
             checkRemotePermission         // The callback function.
         );
     }
