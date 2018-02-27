@@ -5,12 +5,15 @@
     <title>App42 Safari Web Push Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- <script src="js/App42-all-3.2.min.js"></script> -->
+    <script src="js/App42-all-3.2.min.js"></script>
     <script src="js/clientHandler.js"></script>
 
     <script>
 
        // $(document).ready(function () {
+        App42SafariPushService.webPushId = "web.com.shephertz.safariakm";
+        App42SafariPushService.apiKey = "07615a186d1377718979b0d92c146e750ced1c90d62aa8cbd340fb79a04b330f";
+        App42SafariPushService.secretKey = "19db1f07897ba78357918c7295a0032667d59c3cc44a8035f95df5bfba90e5de";
         initializePush();
             // $("#loginBtn4").hide();
             // $("#loginBtn3").show();
