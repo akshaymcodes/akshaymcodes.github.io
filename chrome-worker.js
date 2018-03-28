@@ -28,7 +28,10 @@ var FETCH_ENDPOINT = "https://api.shephertz.com/cloud/1.0/storage/getAllNoticati
 					var jsonPayload = jsonOBJECT[i];
 					messagePayload = {
 						body: jsonPayload.message,
-						icon:iconURL
+						icon:iconURL,
+						data: {
+							url: jsonPayload.message._app42RichPush.content
+						}
 					}
 					parseJSON(jsonOBJECT,i,messagePayload);
 					return self.registration.showNotification(title, messagePayload);
@@ -79,7 +82,7 @@ function parseJSON(jsonOBJECT,i,messagePayload){
 				messagePayload.image = richPush.content
 			}else if(richPush.type==="openUrl"){
 				console.log("Setting URL : " + richPush.content);
-				saveRichPushContentUrl(richPush.content);
+				//saveRichPushContentUrl(richPush.content);
 				CLICK_URL = richPush.content
 			}else if(richPush.type==="youtube"){
 				CLICK_URL = richPush.content
@@ -215,7 +218,9 @@ self.addEventListener('notificationclick', function(event) {
 		var url = event.notification.body;
 	}
 	//var clickURL = event.target.CLICK_URL
-	var clickURL = getRichPushContentUrl();
+	var clickURL = event.notification.data.url;
+	console.log("clickURL",clickURL);
+	//var clickURL = getRichPushContentUrl();
 	if (event.action === actionOne) {  
 		clickURL = actionOne;
 	}if (event.action === actionTwo) {  
@@ -241,16 +246,16 @@ console.log("666666",event)
 });
 
 
-function saveRichPushContentUrl(url){
-	console.log("saving url " + url);
-var encodedUrl = btoa(url);
-console.log("saving url encodedUrl " + encodedUrl);
-localStorage.setItem("_wpcp",encodedUrl);
-}
+// function saveRichPushContentUrl(url){
+// 	console.log("saving url " + url);
+// var encodedUrl = btoa(url);
+// console.log("saving url encodedUrl " + encodedUrl);
+// localStorage.setItem("_wpcp",encodedUrl);
+// }
 
-function getRichPushContentUrl(){
-	var encodedUrl = localStorage.getItem("_wpcp");
-	var decodedUrl = atob(encodedUrl);
-	console.log("getting url decodedUrl " + encodedUrl);
-	return decodedUrl;
-}
+// function getRichPushContentUrl(){
+// 	var encodedUrl = localStorage.getItem("_wpcp");
+// 	var decodedUrl = atob(encodedUrl);
+// 	console.log("getting url decodedUrl " + encodedUrl);
+// 	return decodedUrl;
+// }
