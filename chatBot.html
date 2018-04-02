@@ -1,0 +1,23 @@
+<html>
+  
+<head>
+  <link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+</head>
+
+<body>
+
+    <div id="bot"/>
+    
+    <script>
+      BotChat.App({
+        directLine: { secret: 'v97j7dTh_Q4.cwA.g1s.7hBYWzcNW7bRrsB5t5y79AkNrnzYhos9exp24AlXdnM' },
+        user: { id: 'you' },
+        bot: { id: 'HRAssistant' },
+        resize: 'detect'
+      }, document.getElementById("bot"));
+    </script>
+</body>
+
+</html>
