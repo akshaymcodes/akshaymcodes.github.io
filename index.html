@@ -1,32 +1,53 @@
 <html>
-
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $( document ).ready( function () {
-         
-        //  setTimeout(function(){ $( ".dhlChatPlus" ).toggleClass( "dhlChatOpen" ); }, 5000);
-         
-            $( ".wc-header" ).click( function () {
-              console.log("HELLO")
-                $( "#botu" ).toggleClass( "chatOpen" );
-            } );
-      
-        } );
-      </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$( document ).ready( function () {
+//  setTimeout(function(){ $( ".dhlChatPlus" ).toggleClass( "dhlChatOpen" ); }, 5000);
+$( ".wc-header" ).click( function () {
+console.log("HELLO")
+$( "#botu" ).toggleClass( "chatOpen" );
+} );
+} );
+</script>
+<style>.ChatBox {border: medium none;bottom: 0;float: right;height: 100%;margin: 0 20px 0 0;position: absolute;right: 0;width: 400px;z-index: 2147483647;}
+body{background-image:url('http://blogs.shephertz.com/wp-content/uploads/2017/12/ChatBot-Demo-Page-1366-bg.jpg'); background-repeat: no-repeat; background-position: 100% 49%; overflow: hidden; background-size: cover;}
+.title {
+    width: 25%;
+    margin: 3% auto 0 auto;
+}
+.title figure {
+    float: left;
+	margin: 0;
+}
+.title figure img {
+    width: 100%;
+}
+.demoLabel {
+    color: white;
+    float: right;
+    font-family: Montserrat;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    border-left: 2px solid #ffffff;
+    padding: 10px 0 10px 30px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 961px){
+body {
+    background-size: cover;
+    background-position: 30% 50%;
+    background-image: url(http://www.shephertz.com/wp-content/themes/twentytwelve/applied-ai/ChatBot-Demo-Page-projector4.jpg);
+}
+.title {
+    width: 32%;
+    margin: 3% auto 0 auto;
+}
+}
+</style>
 </head>
 <body>
-    <style>
-    #botu{
-        bottom: 0;
-    position: fixed;
-    right: 0px;
-    height: 344px;
-    /* border-radius: 15px 15px 0px 0px; */
-    
-    }
-    </style>
-    <iframe id="botu" src="chatBot.html" height="500" width="400" />
+<div class="title"><figure><img src="https://s3-us-west-2.amazonaws.com/shepwebimg/shephertz/nav/logo.png?shep22122017"></figure><div class="demoLabel">CHATBOT<br>DEMO</div></div>
+<iframe id="botu" class="ChatBox" src="chatBox.html"/>
 </body>
-
 </html>
