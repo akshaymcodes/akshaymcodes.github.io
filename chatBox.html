@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <link href="="https://demobot.shephertz.com/css/main.css" rel="stylesheet" />
+  <link href="="https://demobot.shephertz.com/css/botchat.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="="https://demobot.shephertz.com/botchat.js"></script>
+</head>
+
+<body>
+  <div class="MotaBhaiChatHead">
+    <div class="chatIcon">
+      <img src="https://demobot.shephertz.com/images/head_icon.png" />
+    </div>
+    <div class="chatTitle">Ask Motabhai
+      <span>Powered by ShepHertz</span>
+    </div>
+  </div>
+  <div class="MotaBhaiChatBody">
+    <div class="dhlFormWrapper">
+      <div id="bot"></div>
+    </div>
+  </div>
+  <div class="chatSep"></div>
+  <div class="MotaBhaiChatFooter">
+    <img src="https://demobot.shephertz.com/images/adMob.png">
+  </div>
+  <script>
+    BotChat.App({ directLine: { secret: 'c3n4b4ZNjbQ.cwA.eA4.dNDrbHpihceGnmE_cOIWd_524I20W_5N3m3sCmQK3xA' }, user: { id: 'you' }, bot: { id: 'MotaBhai' }, resize: 'detect' }, document.getElementById("bot"));		
+  </script>
+</body>
+
+</html>
